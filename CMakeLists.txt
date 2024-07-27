@@ -8,6 +8,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(planningDEMO)
 
 set(CMAKE_CXX_STANDARD 17)
+enable_testing()
 
 #变量和目录设置
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
@@ -26,6 +27,8 @@ find_package(Eigen3 3.4 REQUIRED)
 if(TARGET Eigen3::Eigen)
 message(STATUS "****** Eigen3 3.4.0 found in ${EIGEN3_INCLUDE_DIR} ******")
 endif()
+
 #添加子目录
 add_subdirectory(src)
+add_subdirectory(test/map_test)
 
