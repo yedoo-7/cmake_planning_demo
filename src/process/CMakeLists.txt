@@ -13,3 +13,8 @@ ${PNC_Map_Dir}
 target_link_libraries(${PROJECT_NAME}
 PUBLIC
 pnc_map)
+
+target_link_libraries(${PROJECT_NAME}
+PUBLIC
+Eigen3::Eigen
+)
